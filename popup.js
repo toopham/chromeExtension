@@ -19,6 +19,9 @@ changeColor.addEventListener("click", async () => {
 // current page
 function setPageBackgroundColor() {
   chrome.storage.sync.get("color", ({ color }) => {
+    const header = document.createElement('h1');
+    header.innerHTML = 'TU AND MATT WAS HERE';
+    document.querySelector('body').appendChild(header);
     document.body.style.backgroundColor = color;
   });
 }

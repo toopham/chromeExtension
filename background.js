@@ -9,3 +9,13 @@ chrome.runtime.onInstalled.addListener(() => {
   //   "service_worker": "background.js"
   // }, 
   // "permissions": ["storage", "activeTab", "scripting"]
+
+  // "action": {
+  //   "default_popup": "popup.html", 
+  //   "default_icon": {
+  //     "16": "/images/couch-16.png",
+  //     "32": "/images/couch-32.png",
+  //     "48": "/images/couch-48.png",
+  //     "128": "/images/couch-128.png"
+  //   }
+  // },

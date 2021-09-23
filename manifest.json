@@ -3,8 +3,10 @@
   "description": "Replace any image with quans couch and any noun with 'couch'", 
   "version": "1.0", 
   "manifest_version": 3,
-  "matching" : ["<all_urls>"],
-  "js" : ["main.js"],
+  "content_scripts" : [{
+    "matching" : ["<all_urls>"],
+    "js" : ["main.js"]
+  }],
   "action": {
     "default_popup": "popup.html", 
     "default_icon": {

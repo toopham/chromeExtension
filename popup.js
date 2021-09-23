@@ -1,9 +1,15 @@
+chrome.action.setBadgeText({text: 'ON'});
+chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
+
 // Initialize button with user's preferred color
 let changeColor = document.getElementById("changeColor");
+
+
 
 chrome.storage.sync.get("color", ({ color }) => {
   changeColor.style.backgroundColor = color;
 });
+
 
 // When the button is clicked, inject setPageBackgroundColor into current page
 changeColor.addEventListener("click", async () => {
@@ -19,6 +25,8 @@ changeColor.addEventListener("click", async () => {
 // current page
 function setPageBackgroundColor() {
   chrome.storage.sync.get("color", ({ color }) => {
+
+    
     const header = document.createElement('h1');
     header.innerHTML = 'TU AND MATT WAS HERE';
     document.querySelector('body').appendChild(header);
